@@ -1,4 +1,4 @@
-const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const BASE_URL = const BASE_URL = process.env.REACT_APP_API_URL || "https://serverless-attendance-system.onrender.com";
 
 export const registerStudent = async (studentData) => {
   const response = await fetch(`${BASE_URL}/register`, {
