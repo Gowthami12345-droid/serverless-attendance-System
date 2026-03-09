@@ -14,7 +14,7 @@ function StudentLogin() {
     }
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/students");
+      const response = await fetch(`${process.env.REACT_APP_API_URL || "https://serverless-attendance-system.onrender.com"}/students`);
       const students = await response.json();
 
       const found = students.find((s) => s.id === id);
