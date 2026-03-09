@@ -13,7 +13,7 @@ function MentorLogin() {
     if (!id || !password) { setMessage("❌ Please fill all fields."); return; }
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:5000/login/mentor", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL || "https://serverless-attendance-system.onrender.com"}/login/mentor`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, password }),
